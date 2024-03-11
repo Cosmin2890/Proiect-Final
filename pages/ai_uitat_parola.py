@@ -24,7 +24,7 @@ class AiUitatParolaPage(Browser):
     def clean_email_text_field(self):
         self.driver.find_element(*self.EMAIL_INPUT).clear()
 
-    def verify_mesaj_eroare(self,expected_message):
+    def verify_mesaj_eroare(self, expected_message):
         try:
             actual_message = self.driver.find_element(*self.NOTIFICATION_MESSAGE).text
         except NoSuchElementException:
