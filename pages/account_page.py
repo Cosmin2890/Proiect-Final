@@ -40,3 +40,4 @@ class AcountPage(Browser):
             actual_message = "None"
 
         assert actual_message == expected_message, f'Exista masina inregistrata'
+

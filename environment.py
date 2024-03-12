@@ -1,7 +1,7 @@
 from browser import Browser
 from pages.login_page import LoginPage
 from pages.ai_uitat_parola import AiUitatParolaPage
-from pages.acount_page import AcountPage
+from pages.account_page import AcountPage
 
 
 def before_all(context):

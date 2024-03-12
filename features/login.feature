@@ -4,7 +4,7 @@ Feature: Check the Login functionality
     Given login: I am a user on the login page
     Given login: I accept all cookies
 
-@login_test
+@login_test_1
   Scenario: Enter wrong credentials and check the error
     When login: I fill in an email "email@mail.com"
     When login: I fill in a password "pass"

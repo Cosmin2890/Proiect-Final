@@ -1,4 +1,4 @@
-Feature: Verifitime.sleep(10) are functionaliatete Reseteaza parola
+Feature: Reseteaza parola
 
   Background:
     Given login: I am a user on the login page
