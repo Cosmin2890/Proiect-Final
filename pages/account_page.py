@@ -6,12 +6,12 @@ from selenium.common import NoSuchElementException
 class AcountPage(Browser):
 
     DECONECTEAZA_BUTTON = (By.CLASS_NAME, "logout-btn")
-    INFORMATII_PERSONALE_BUTTON = (By.XPATH, "/html/body/div[2]/div/div[2]/div[1]/div/ul/li[2]/a")
+    INFORMATII_PERSONALE_BUTTON = (By.XPATH, "//div[contains(text(),'Informatii personale')]")
     NUME_FIELD = (By.ID, "lastname")
-    TRIMITE_BUTTON = (By.XPATH, "/html/body/div[2]/div/div[2]/div[2]/div[1]/div[2]/form/div/div[6]/div/a")
+    TRIMITE_BUTTON = (By.XPATH, "//span[contains(text(),'Trimite')]")
     PRENUME_FIELD = (By.ID, "firstname")
-    MASINILE_MELE_BUTTON = (By.XPATH, "/html/body/div[2]/div/div[2]/div[1]/div/ul/li[3]/a/div/div[2]")
-    NO_MACHINE_MESSAGE = (By.XPATH, "/html/body/div[2]/div/div[2]/div[2]/div[2]")
+    MASINILE_MELE_BUTTON = (By.XPATH, "//div[contains(text(),'Masinile mele')]")
+    NO_MACHINE_MESSAGE = (By.XPATH, "//div[@class='col-12 bg-white']")
 
     def click_logout_button(self):
         self.driver.find_element(*self.DECONECTEAZA_BUTTON).click()

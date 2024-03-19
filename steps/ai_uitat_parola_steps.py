@@ -10,7 +10,7 @@ def step_impl(context, email):
 @when('ai_uitat_parola: I click on the Trimite button')
 def step_impl(context):
     context.ai_uitat_parola.click_buton_trimite()
-    time.sleep(2)
+
 
 
 @then('ai_uitat_parola: I verify the invalid email validation message "{msg}"')

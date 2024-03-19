@@ -27,3 +27,16 @@ Feature: Check the Login functionality
     Then logout: I click the logout button
     Then login: Verify expected pages "https://www.tiriacauto.ro/"
 
+@multiple_value
+  Scenario Outline: Check various email validation
+    When login: I fill in an email "<email>"
+    When login: I fill in a password "<pass>"
+    When login: I click the login button
+    Then login: It shown an error message "<expected_message>"
+
+  Examples:
+    |email          |pass    |expected_message                            |
+    |test@1         |fgdgdb  |Datele de identificare nu pot fi confirmate.|
+    |test@gmail.com |124566  |Datele de identificare nu pot fi confirmate.|
+    |test@yahoo     |gra457  |Datele de identificare nu pot fi confirmate.|
+    |test@mail.com  |@nutg7% |Datele de identificare nu pot fi confirmate.|

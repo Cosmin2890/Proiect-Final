@@ -10,7 +10,7 @@ def step_impl(context):
 @given('login: I accept all cookies')
 def step_impl(context):
     context.login_page.click_accept_cookie()
-    time.sleep(2)
+
 
 
 @when('login: I click on the Ai uitat parola link')
